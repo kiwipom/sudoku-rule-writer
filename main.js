@@ -54,7 +54,7 @@ add scopes to different page parts (button-scopes are defined in index.html)
 $("#preview").append(footer)
 
 
-  for (rule of ruleset.rules) {
+  for (rule of ruleset.rules.sort((r1,r2) => Number(r2.order) - Number(r1.order))) {
 /*
 adds all rules to html and hide them standardly.
 */
